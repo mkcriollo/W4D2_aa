@@ -6,17 +6,20 @@ class Employee
         @name = name 
         @title = title
         @salary = salary
-        @boss
+        @boss = boss
     end
 
     def bonus(multiplier)
-        @bonus = self.salary * multiplier
+        self.salary * multiplier
     end
 
     def boss=(boss)
         @boss = boss
         boss.add_emp(self) unless @boss == nil
+        boss
     end
+
+    
   
 
 

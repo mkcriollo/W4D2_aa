@@ -2,7 +2,8 @@ require_relative "employee.rb"
 
 class Manager < Employee
 
-    def initialize
+    def initialize(name,salary,title,boss=nil)
+        super(name,salary,title,boss)
         @employees = []
     end
 
@@ -18,12 +19,18 @@ class Manager < Employee
 
 end
 
+private
 
 
-ned = Employee.new("Ned",1000000,"Founder",nil)
-darren = Employee.new("Darren",78000,"TA Manager",ned)
+
+ned = Manager.new("Ned",1000000,"Founder",nil)
+darren = Manager.new("Darren",78000,"TA Manager",ned)
 shawna = Employee.new("Shawna",12000,"TA",darren)
 david = Employee.new("David",10000,"TA",darren)
+
+ned.add_emp(darren)
+darren.add_emp(shawna)
+darren.add_emp(david)
 
 p ned.bonus(5) # => 500_000
 p darren.bonus(4) # => 88_000
