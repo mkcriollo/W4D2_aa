@@ -1,5 +1,5 @@
 class Piece
-    def initialize
+    def initializ
         
     end
 end
