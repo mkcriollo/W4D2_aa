@@ -11,8 +11,8 @@ attr_accessor :rows
             Array.new(8,NullPiece.new()),
             Array.new(8,NullPiece.new()),
             Array.new(8,NullPiece.new()),
-            Array.new(8,Piece.new(self)),
-            Array.new(8,Piece.new(self)),
+            Array.new(8,Piece.new(self)), #7
+            Array.new(8,Piece.new(self)), #8
         ]       
     end
 
