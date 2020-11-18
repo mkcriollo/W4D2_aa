@@ -1,10 +1,14 @@
-require_relative "board.rb"
+# require_relative "board.rb"
 
 class Piece
-    def initialize(board, pos)
+    def initialize(color = nil ,board, pos = nil)
         @board = board
+        @color = color
         @pos = pos 
     end
+
+    attr_reader :color, :board
+    attr_accessor :pos
 
     # def moves
     #     valid_moves = []
