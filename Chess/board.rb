@@ -1,17 +1,18 @@
 require_relative 'piece'
 require_relative 'nullpiece'
+require_relative 'piece'
 class Board
 attr_accessor :rows
     def initialize
         @rows = [
-            Array.new(8,Piece.new()),
-            Array.new(8,Piece.new()),
+            Array.new(8,Piece.new(self)),
+            Array.new(8,Piece.new(self)),
             Array.new(8,NullPiece.new()),
             Array.new(8,NullPiece.new()),
             Array.new(8,NullPiece.new()),
             Array.new(8,NullPiece.new()),
-            Array.new(8,Piece.new()),
-            Array.new(8,Piece.new()),
+            Array.new(8,Piece.new(self)),
+            Array.new(8,Piece.new(self)),
         ]       
     end
 

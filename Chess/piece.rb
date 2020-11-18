@@ -1,8 +1,9 @@
 require_relative "board.rb"
 
 class Piece
-    def initialize
-        @board = Board.new()
+    def initialize(board)
+        @board = board
+       
     end
 
     def moves
